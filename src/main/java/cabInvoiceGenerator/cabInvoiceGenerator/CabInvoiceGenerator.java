@@ -11,4 +11,12 @@ public class CabInvoiceGenerator {
 			totalFare = MINIMUM_COST;
 		return totalFare;
 	}
+
+	public double totalFare(Ride[] rides) {
+		double totalFare = 0;
+		for (Ride ride : rides) {
+			totalFare += calculateFare(ride.distance, ride.time);
+		}
+		return totalFare;
+	}
 }
