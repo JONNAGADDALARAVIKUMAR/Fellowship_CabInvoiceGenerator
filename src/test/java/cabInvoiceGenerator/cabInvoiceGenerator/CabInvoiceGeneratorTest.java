@@ -39,4 +39,11 @@ public class CabInvoiceGeneratorTest {
 		InvoiceSummary expectedSummary = new InvoiceSummary(3, 243.0);
 		Assert.assertEquals(expectedSummary, summary);
 	}
+	
+	@Test
+	public void thisTestWillBePassedWhenIdPassedAndReturnSummaryEquals() { 
+		InvoiceSummary summary = cabInvoiceGenerator.calculateTotalFareFromRepository(3300);
+		InvoiceSummary expectedSummary = new InvoiceSummary(3, 303.0);
+		Assert.assertEquals(expectedSummary, summary);
+	}
 }
